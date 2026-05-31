@@ -405,6 +405,9 @@ const SysFontInfo *SysFontList::find(const std::string &name, bool fixedWidth, b
 
 GlobalParams::GlobalParams(std::string customPopplerDataDir) : popplerDataDir(std::move(customPopplerDataDir))
 {
+    if (const char* popplerDataDirEnv = std::getenv("POPPLER_DATADIR"); popplerDataDir.empty() && popplerDataDirEnv != nullptr) {
+        popplerDataDir = std::string(popplerDataDirEnv);
+    }
     // scan the encoding in reverse because we want the lowest-numbered
     // index for each char name ('space' is encoded twice)
     macRomanReverseMap = new NameToCharCode();
