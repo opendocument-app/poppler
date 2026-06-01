@@ -688,7 +688,11 @@ if(ENABLE_UNSTABLE_API_ABI_HEADERS)
     poppler/AnnotStampImageHelper.h
     poppler/Array.h
     poppler/CachedFile.h
+    poppler/CairoFontEngine.h
+    poppler/CairoOutputDev.h
+    poppler/CairoRescaleBox.h
     poppler/Catalog.h
+    poppler/CharCodeToUnicode.h
     poppler/CryptoSignBackend.h
     poppler/DateInfo.h
     poppler/Dict.h
